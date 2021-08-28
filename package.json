@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/KarloMijaljevic/url-shortening#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node-cache": "^5.1.2",
+    "randomstring": "^1.2.1",
+    "validator": "^13.6.0"
   }
 }
