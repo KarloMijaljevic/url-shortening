@@ -20,3 +20,5 @@ The main fucntion of the app:
 The test's the app covers:
 1. A mock test of the GET and POST request's when the user sends GOOD data
 2. A mock test of the GET and POST request's when the user sends BAD data
+
+The app also has a dockerfile now which can be built to run the app
