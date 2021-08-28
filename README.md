@@ -1,4 +1,6 @@
 Simple URL shortening app
+
+The main fucntion of the app:
 1. First step was to set up Linux Ubuntu WSL, node.js and npm.
 2. Second step was to fix readme :D and install express and set up a simple endpoint
 3. Third step is to add a POST HTTP rule for the url shortening service:
@@ -14,3 +16,7 @@ Simple URL shortening app
    3. If it has, it redirects the user to the url page and send a 301 Redirect
    4. If it has no such short URL in its cache it sends back a 400 Bad Request response
 5. This concludes the basic server functionalities
+
+The test's the app covers:
+1. A mock test of the GET and POST request's when the user sends GOOD data
+2. A mock test of the GET and POST request's when the user sends BAD data
