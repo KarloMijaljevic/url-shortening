@@ -8,3 +8,9 @@ Simple URL shortening app
       the client a json = {"shortUrl":"shortUrl", "url":"anyUrl"}
    4. If the URL is not valid send a 400 Bad Request response
    5. Packages installed: node-cache, randomstring and validator
+4. Final server setup step, added GET HTTP rule for the url shortening service:
+   1. Client sends a GET request with json {"shortUrl", "shortUrl"}
+   2. Server checks cache to chek if such short url has a corresponding url
+   3. If it has, it redirects the user to the url page and send a 301 Redirect
+   4. If it has no such short URL in its cache it sends back a 400 Bad Request response
+5. This concludes the basic server functionalities

@@ -29,6 +29,25 @@ router.post("/", (req, res) => {
    }
 })
 
+// @route ==> GET url
+// @description ==> Client sends the short URL and server has to respond with a redirect using the CACHed URL
+router.get("/", (req, res) => {
+   const shortUrl = req.body.shortUrl;
+   var url = "";
+   // Check if URL is already present in CACHE
+   if (myCache.has(shortUrl)) {
+      url = myCache.get(shortUrl);
+   }
+   if (url !== "") {
+      // Simple redirect
+      res.status(301).redirect(url);
+   }
+   else {
+      // Bad request response
+      res.status(400).json({ "error": "Given short URL is NOT present in the server >_<" });
+   }
+})
+
 // @description ==> Used to shorten and cache given URL
 function shortenUrl(url) {
    // Check if URL is already present in CACHE
